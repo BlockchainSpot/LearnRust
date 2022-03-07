@@ -23,4 +23,4 @@ fn main() {
     }
 
 }
-
+// il n'y a pas de valeur null en rust mais un type Option<T> Some<T> et None

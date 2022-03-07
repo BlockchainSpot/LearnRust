@@ -1,6 +1,7 @@
 
 // Partie 1 : afficher une grille de Sudoku
 fn print_grid(grid: &[[u8; 9]; 9]) {
+    println!("");
     // parcourir à l'intérieur du tableauu
     for l in 0..9 {
         if l !=0 && l % 3 == 0 {
@@ -64,7 +65,7 @@ fn solve(grid: &[[u8; 9]; 9]) -> Vec<[[u8; 9]; 9]> {
             }
         }
     }
-
+    sols_founded.push(*grid);
     return sols_founded;
 }
 

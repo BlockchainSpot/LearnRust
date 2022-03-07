@@ -1,4 +1,3 @@
-
 // fn main() {
 // let mut v = vec![1, 2, 3,4 ];
 // for x in &mut v {
@@ -135,3 +134,66 @@ Ref modifiable &mutT
 //     //affichage
 //     println!("x={}, y={}",x , y); //
 // }
+
+// struct Personne {
+//     nom: String,
+//     prenom: String,
+// }
+
+// fn main() {
+//     let p = Personne{
+//         nom: "Block".to_string(),
+//         prenom: "Karl".to_string(),
+//     };
+//     println!("{} {}", p.prenom, p.nom); // jeff BEZOS
+// }
+/*
+
+tuple (val1, val2, val3)
+struct tuple struct nom (type1, type2,...)
+Struct Struct Nom {att1: type, ..}
+
+// énumération 
+
+*/
+
+// enum Feu {
+//     Rouge,
+//     Orange,
+//     Vert
+// }
+
+// fn main() {
+//     let f = Feu::Rouge;
+//     match f {
+//         Feu::Vert => print!("Avancer"),
+//         Feu::Rouge|Feu::Orange => println!("Arreter"),
+//     };
+// }
+
+// enum Forme {
+//     Point, // pas de dimension
+//     Cercle (i64), // rayon
+//     Ellipse (i64,i64), // rayon1, rayon2
+//     Rectangle { longueur: i64, largeur:i64}
+// }
+
+// let formes =  [
+//     Forme::Point;
+//     Forme::Cercle (5);
+//     Forme::Ellipse (4, 6);
+//     Forme::Rectangle { longueur: 9, largeur: 6};
+// ];
+
+// fn main(){
+//     for f in &formes {
+//         match f {
+//             Forme::Cercle (r) => println!("Cercle : rayon = {}", r),
+//             Forme::Rectangle { longueur, largeur } =>
+//                 println!("Rectangle : longueur = {}, largeur = {}",
+//                     longueur, largeur),
+//             _ => println!("cas non traité"),
+//         };
+//     }
+// }
+

@@ -42,11 +42,7 @@ dbg!(s); // s = "Bonjour!"
 //     let s = "Voici mon premier message";
 
 //     println!("{}", s.contains("premier"));
-<<<<<<< HEAD
-//     println!("{}", s.replace("mon","ton"));
-=======
 //     println!("{}", s.replace("nom","ton"));
->>>>>>> bd3b8760a4e3d4f488018a0ac71dcfe3cb29bcbb
 //     println!("{}", s.starts_with("Voici"));
 //     println!("{}", s.ends_with("message"));
 //     println!("{}", s.to_uppercase());
@@ -57,7 +53,7 @@ dbg!(s); // s = "Bonjour!"
 //         Some(n) => println!("position = {}",n),
 //         None => println!("non présent"),
 //     }
-<<<<<<< HEAD
+
 
 //     if let Some(n) = s.find("mon"){
 //         println!("position = {}", n)
@@ -124,17 +120,17 @@ dbg!(s); // s = "Bonjour!"
 // }
 
 
-fn add (a: String, b: String) -> String {
-   format!("{} {}", a, b)
-}
+// fn add (a: String, b: String) -> String {
+//    format!("{} {}", a, b)
+// }
 
-fn main() {
-    let h = String::from("Hello");
-    let w = String::from("World");
+// fn main() {
+//     let h = String::from("Hello");
+//     let w = String::from("World");
 
-    println!("h + w = {}", add(h, w));
-}
-=======
+//     println!("h + w = {}", add(h, w));
+// }
+// =======
 // }
 // position 6
 
@@ -278,5 +274,51 @@ Struct Struct Nom {att1: type, ..}
 //         };
 //     }
 // }
->>>>>>> bd3b8760a4e3d4f488018a0ac71dcfe3cb29bcbb
+// fn main() {
+//     let mut x: Option<i32>;
+//         x = Some(6); // valeur 6
+//         //x = None; // pas de valeur
 
+//         //test solution 1
+//         // x.is_none(); // test de l'absence de valeur
+//         // x.is_some(); // test de la présence d'une valeur
+
+//         //test avec match 
+
+//         // match x {
+//         //     Some(val) => println!(" test {}", val),
+//         //     None => println!("il n'y a pas de valeur")
+//         // }
+//         //test avec if let
+        
+//         if let Some(val) = x {
+//             println!("La valeur est {}.", val);
+//         } else  {
+
+//             println!(" Pas de valeur");
+            
+//         }
+// }
+
+// fn main() { 
+//     let mut v = vec![2, 4, 6]; // Definition
+//     // let x = v.pop(); // x = Some(6) // valeur 6
+//     // let y = v.get(10); // y = None // pas de valeur 10
+//     // let z = v[10]; // panic ! pas de donnée en option prévue
+
+//     match v.get(10) {
+//         Some(x) => println!("Valeur {}", x),
+//         None => println!(" pas de valeur")
+//     }
+// }
+
+// fn main() {
+//     let mut v = vec![2, 4, 6];
+
+//     while let Some(x) = v.pop() {
+//         print! ("{} ", x);
+//     }
+// }
+fn main() {
+    
+}

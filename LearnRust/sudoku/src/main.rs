@@ -54,8 +54,13 @@ fn solve(grid: &[[u8; 9]; 9]) -> Vec<[[u8; 9]; 9]> {
                 for i in 1..=9 {
                     if is_possible(grid, y, x, i) {
                         let mut new_grid = grid.clone();
-                        new_grid[y][x] = i;                    }
+                        new_grid[y][x] = i;
+                        
+                        let sols = solve(&new_grid);
+                        sols_founded.extend(sols);
+                    }
                 }
+                return sols_founded;
             }
         }
     }

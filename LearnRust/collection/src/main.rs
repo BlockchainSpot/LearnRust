@@ -14,12 +14,12 @@ fifo : Premier entré premier sortie
 
 
 // vec!
-fn main() {
-    let mut v = vec![1, 2, 3, 4];
-    v.push(5);
-    v.pop();
-    v.insert(0, 5);
-}
+// fn main() {
+//     let mut v = vec![1, 2, 3, 4];
+//     v.push(5);
+//     v.pop();
+//     v.insert(0, 5);
+// }
 
 
 // use std::collections::VecDeque;
@@ -66,7 +66,129 @@ fn main() {
 // }
 
 
+// Collection LinedList
+// fonctionne comme un vecdeque mais ce n'est pas linéaire 
+
+// use std::collections::LinkedList;
+// fn main() {
+//     let mut l = LinkedList::new();
+//     l.extend([1, 2, 3]);
+//     l.pop_front();
+//     l.push_back(4);
+//     l.push_front(5);
+//     l.push_front(6);
+//     println!("{:?}", l);
+// }
+
+// hashSet est comme hashmap
+// mais la valeur est également la KEY  V = K
+
+// use std::collections::HashSet;
+// fn main() {
+//     let mut hs = HashSet::new();
+//     hs.insert("Bob");
+
+//     hs.extend(["Peter","Bob","Peter","Sally","Bob"]);
+//     println!("{:?}", hs);
+
+//     hs.remove("Peter");
+//     println!("{:?}", hs);
+// }
+
+// BinaryHeap comme une file 
+
+// use std::collections::BinaryHeap;
+// fn main() { 
+//     let mut bh = BinaryHeap::new();
+//     bh.push((8, "Bob"));
+//     bh.extend([(2, "Al"),(7, "Zoe"),(8, "Bob"), (4, "Al")]);
+    
+//     while let Some((priority, name)) = bh.pop(){
+//         print!("{}:{} ", priority, name);
+//     }
+// }
+
+// link list  : pile ou fil sans indexation
+// hashset ensemble
+// file de priorité
+
+// function anonymes
+
+// ###### methode normal ######
+// fn main() {
+//     fn add(a:i32, b:i32) -> i32 {
+//         a + b
+//     }
+//     print!("1 + 1 = {}", add(1, 1));
+// }
+
+// ####  methode courte  ######
+
+// fn main() {
+//     let add = |a, b| a + b;
+//     print!("1 + 1 = {}", add(1, 1));
+// }
+
+// Methode Classique :
+// fn print(x: i32) {
+//     println!("{}", x);
+// }
+
+// fn main() {
+//     let v = [1, 2, 3, 4];
+//     v.into_iter().for_each(print);
+// }
+
+// methode simplifier
+
+// fn main() {
+//     let v = [1, 2, 3, 4];
+//     v.into_iter().for_each(|x| print!("{} ", x));
+// }
 
 
+// fn main() {
+//     let v = [1, 2, 3, 4];
 
 
+//     let a = 10;
+//     let print = |x| print!("{} ", x * a);
+//     v.into_iter().for_each(print);
+// }
+
+// Closure ( capable de capture une variable de sont envi)
+// fn main() {
+//     let v = [1, 2, 3, 4];
+//     let mut a = 0;
+//     let print = |x| {
+//         a += 10;
+//         print!("{}:{} ", a, x);
+
+//     };
+//     v.into_iter().for_each(print);
+// }
+
+// Move utilisation pour multy threading
+// fn main() {
+//     let v = [1, 2, 3, 4];
+//     let print = {
+//         let mut a = 0;
+//         move |x|  {
+//             a += 10;
+//             print!("{}:{} ",a , x);
+//         }
+//     };
+//     v.into_iter().for_each(print);
+// }
+//autre méthode par un changement de propriétaire
+
+// fn main() {
+//     let v = [1, 2, 3, 4];
+//     v.into_iter().for_each({
+//         let mut a = 0;
+//         move |x|  {
+//             a += 10;
+//             print!("{}:{} ",a , x);
+//         }
+//     });  
+// }

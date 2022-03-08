@@ -312,13 +312,13 @@ Struct Struct Nom {att1: type, ..}
 //     }
 // }
 
-// fn main() {
-//     let mut v = vec![2, 4, 6];
+ fn main() {
+     let mut v = vec![2, 4, 6];
 
-//     while let Some(x) = v.pop() {
-//         print! ("{} ", x);
-//     }
-// }
-fn main() {
+     while let Some(x) = v.pop() {
+         print! ("{} ", x);
+     }
+ }
+//fn main() {
     
-}
+//}

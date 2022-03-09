@@ -181,6 +181,7 @@ fifo : Premier entré premier sortie
 //     v.into_iter().for_each(print);
 // }
 //autre méthode par un changement de propriétaire
+//  le block de déclaration dans le passage de parametre 
 
 // fn main() {
 //     let v = [1, 2, 3, 4];
@@ -192,3 +193,18 @@ fifo : Premier entré premier sortie
 //         }
 //     });  
 // }
+
+// retourner une functon à partir d'une autre function
+// fn main() {
+//     let create_counter = |i| {
+//         let mut a = 0;
+//         move || {a += i; a }
+//     };
+//     let mut count = create_counter(10);
+//     print!("{} ", count());
+// }
+
+
+/*
+a suivre...
+*/

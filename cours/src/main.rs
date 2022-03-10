@@ -312,13 +312,29 @@ Struct Struct Nom {att1: type, ..}
 //     }
 // }
 
- fn main() {
-     let mut v = vec![2, 4, 6];
+//  fn main() {
+//      let mut v = vec![2, 4, 6];
 
-     while let Some(x) = v.pop() {
-         print! ("{} ", x);
-     }
- }
+//      while let Some(x) = v.pop() {
+//          print! ("{} ", x);
+//      }
+//  }
 //fn main() {
     
 //}
+
+// num = if a { b } else { c };
+
+/*
+Strings :
+*/
+
+fn main() {
+    let mut s1 = String::from("abc");
+    do_stuff(&mut s1);
+    println!(" {}", s1);
+}
+
+fn do_stuff(s: &mut String)  {
+    (*s).insert_str(0, "hi, ");
+}

@@ -329,6 +329,9 @@ Struct Struct Nom {att1: type, ..}
 Strings :
 */
 
+// Ce que tu crée sont des constantes
+
+
 fn main() {
     let mut s1 = String::from("abc");
     do_stuff(&mut s1);

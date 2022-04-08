@@ -1,37 +1,68 @@
+mod random_info;
+use random_info::*;
 
+#[allow(non_snake_case)]
 #[allow(unused_variables)]
 #[allow(unused_assignments)]
 
-// Mon apprentissage Rust 
-#[allow(non_snake_case)]
+#[allow(dead_code)] 
+#[derive(Debug)]
+
+
+
+
+// dont use it on prod but for test i dont want warning 
+struct DougsData {
+   some_int: i32,
+   some_float: f64,
+   some_bool: bool,
+   random: RandomInfo,
+}
+
+impl SomeTrait for DougsData {
+   fn is_valid(&self) -> bool {
+      true
+   }
+}
+
+fn print_if_is_valid(check_me: &dyn SomeTrait) {
+   if check_me.is_valid() {
+      println!("Yay!");
+   }
+}
+
+impl Default for DougsData {
+   fn default() -> Self {
+      Self {
+         some_bool: true,
+         some_float: 10.3,
+         some_int: 80,
+         random: RandomInfo::new(true),
+      }
+   }
+}
 
 fn main() {
-
-   let some_bool = true;
-   let some_int = 30;
-   let some_int2 = 50;
-
-   if some_bool == true ||  some_int > 100 && some_int2 == 200 {
-      println!("Hit if branch")
-
-   } else if  some_int == 30 {
-      println!(" hit Else IF branch")
-   } else {
-      println!(" Hit else branch")
-   }
-
-   match some_int{
-      0 => println!("Hi 0 branch"),
-      1..=100 => println!("Between 1 and 100 branch"),
-      _ => println!("Else Branch"),
-   }
-
-   let var_from_match = match some_bool { true => 10, false => 20};
-
-   let var_from_match2 = match some_int {
-      0 => 0,
-      1 => 100,
-      _ => 200,
+   let random_info_var = RandomInfo { 
+      some_bool: true,
+      some_int: 10,
+      call_count: 0,
    };
 
+ 
+   let dougs_var = DougsData {
+      some_bool: true,
+      some_float: 10.3,
+      some_int: 80,
+      random: RandomInfo::new(true),
+   };
+
+   let dougs_var = DougsData::default();
+
+   println!("{:?}",dougs_var);
+
+   print_if_is_valid(&random_info_var);
+   print_if_is_valid(&dougs_var);
+
 }
+

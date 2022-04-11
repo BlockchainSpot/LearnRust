@@ -17,7 +17,7 @@
 
 // }
 
-// un tableau peut parcouru avec un boucle for et avec un ref en lecture ou en écriture 
+// un tableau peut être parcouru avec un boucle for et avec un ref en lecture ou en écriture 
 
 
 
@@ -332,12 +332,12 @@ Strings :
 // Ce que tu crée sont des constantes
 
 
-fn main() {
-    let mut s1 = String::from("abc");
-    do_stuff(&mut s1);
-    println!(" {}", s1);
-}
+// fn main() {
+//     let mut s1 = String::from("abc");
+//     do_stuff(&mut s1);
+//     println!(" {}", s1);
+// }
 
-fn do_stuff(s: &mut String)  {
-    (*s).insert_str(0, "hi, ");
-}
+// fn do_stuff(s: &mut String)  {
+//     (*s).insert_str(0, "hi, ");
+// }

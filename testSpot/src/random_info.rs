@@ -26,3 +26,9 @@ impl RandomInfo {
     }
 
 }
+
+struct LookMaNoFields{}
+
+struct Pair<T> {x: T, y: T,}
+
+struct Color(u8, u8, u8)
